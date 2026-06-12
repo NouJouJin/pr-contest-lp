@@ -1,0 +1,646 @@
+/* =====================================================================
+   自治体PR動画コンテスト 公募LP — style_v2_additions.css
+   優先度A群（01ヒーロー／02ファクトシート／03報道ウォール／05白井市実証）
+   このファイルは style.css の後に読み込むこと。既存変数を利用しつつ
+   v2用クラス（hero--v2, factsheet, media-wall, case__visuals, case__news*, case__ga4*）
+   を追加する。
+   ===================================================================== */
+
+/* ---------- 共通：追加変数（明朝・差し色） ---------- */
+:root {
+  --font-serif: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  --accent-akane: #b94f4a;   /* 茜：差し色（バッジ・引用ライン用） */
+  --paper:       #f3eee2;    /* 新聞紙風オフホワイト */
+  --paper-ink:   #2a2620;    /* 新聞インク色 */
+}
+
+/* =====================================================================
+   ① Hero v2 — モンタージュ背景＋ステータスバッジ＋結論先出し
+   ===================================================================== */
+.hero--v2 {
+  padding: 96px 0 100px;
+}
+
+/* モンタージュ背景：12枚の擬似サムネイル */
+.hero__montage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 6px;
+  padding: 6px;
+  opacity: 0.18;
+  pointer-events: none;
+  filter: saturate(0.7);
+}
+.hero__thumb {
+  display: block;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #2a7e9b 0%, #1f5e7a 100%);
+}
+.hero__thumb--1  { background: linear-gradient(135deg, #4a8c6f 0%, #2a5e47 100%); }
+.hero__thumb--2  { background: linear-gradient(135deg, #c89b3c 0%, #8a6420 100%); }
+.hero__thumb--3  { background: linear-gradient(135deg, #5a7eaa 0%, #2a4a78 100%); }
+.hero__thumb--4  { background: linear-gradient(135deg, #b94f4a 0%, #7a2e2a 100%); }
+.hero__thumb--5  { background: linear-gradient(135deg, #28a89a 0%, #1f6e64 100%); }
+.hero__thumb--6  { background: linear-gradient(135deg, #6a4a8a 0%, #3a2a5a 100%); }
+.hero__thumb--7  { background: linear-gradient(135deg, #3a7a5a 0%, #1f4a3a 100%); }
+.hero__thumb--8  { background: linear-gradient(135deg, #d8a878 0%, #8a6840 100%); }
+.hero__thumb--9  { background: linear-gradient(135deg, #4a6e9a 0%, #1f3e6a 100%); }
+.hero__thumb--10 { background: linear-gradient(135deg, #b04a6a 0%, #7a2a4a 100%); }
+.hero__thumb--11 { background: linear-gradient(135deg, #5aa89a 0%, #2a7864 100%); }
+.hero__thumb--12 { background: linear-gradient(135deg, #c87a40 0%, #8a4a20 100%); }
+
+/* 上にグラデオーバーレイをかけて文字可読性を確保 */
+.hero--v2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(15, 48, 87, 0.55) 0%, rgba(15, 48, 87, 0.85) 60%, rgba(15, 48, 87, 0.95) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero--v2 .hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* ステータスバッジ */
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(40, 168, 154, 0.5);
+  border-radius: 999px;
+  padding: 8px 18px 8px 14px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.84rem;
+}
+.hero__status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.18);
+  animation: hero-pulse 2.2s ease-in-out infinite;
+}
+@keyframes hero-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.18); }
+  50%      { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0.05); }
+}
+.hero__status-text {
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+.hero__status-meta {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.78rem;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ヒーロータイトル v2：結論先出し */
+.hero__title--v2 {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+.hero__title-emph {
+  color: var(--gold);
+  font-weight: 900;
+  position: relative;
+  padding: 0 3px;
+}
+.hero__title-emph::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 2px;
+  height: 6px;
+  background: rgba(200, 155, 60, 0.28);
+  z-index: -1;
+}
+
+.hero__lead--v2 strong {
+  color: var(--mint);
+  font-weight: 700;
+}
+.hero__lead--v2 strong:first-of-type {
+  color: var(--white);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 767px) {
+  .hero--v2 { padding: 56px 0 64px; }
+  .hero__status {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    padding: 10px 14px;
+    margin-bottom: 22px;
+  }
+  .hero__status-meta {
+    padding-left: 0;
+    border-left: 0;
+    font-size: 0.72rem;
+  }
+  .hero__montage {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    opacity: 0.12;
+  }
+  .hero__thumb--9, .hero__thumb--10, .hero__thumb--11, .hero__thumb--12 { display: none; }
+}
+
+/* =====================================================================
+   ② Factsheet — 30秒ファクトシート（新聞メトリクス風）
+   ===================================================================== */
+.factsheet {
+  background: var(--paper);
+  padding: 80px 0 96px;
+  position: relative;
+}
+.factsheet::before,
+.factsheet::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 6px;
+  background: var(--ink);
+}
+.factsheet::before { top: 0; }
+.factsheet::after  { bottom: 0; background: var(--accent-akane); }
+
+.factsheet__head {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(15, 48, 87, 0.15);
+}
+.factsheet__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--accent-akane);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.factsheet__title {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.factsheet__meta {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+.factsheet__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--paper);
+  border: 1px solid rgba(15, 48, 87, 0.18);
+  margin-bottom: 40px;
+}
+.factsheet__item {
+  padding: 28px 18px;
+  text-align: center;
+  border-right: 1px solid rgba(15, 48, 87, 0.12);
+  border-bottom: 1px solid rgba(15, 48, 87, 0.12);
+  background: rgba(255, 255, 255, 0.5);
+}
+.factsheet__item:nth-child(4n) { border-right: none; }
+.factsheet__item:nth-last-child(-n+4) { border-bottom: none; }
+
+.factsheet__num {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(2.2rem, 4.8vw, 3rem);
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.factsheet__unit {
+  font-size: 0.42em;
+  margin-left: 4px;
+  color: var(--text-mid);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.factsheet__label {
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* 引用ボックス（新聞リード文風） */
+.factsheet__pullquote {
+  position: relative;
+  background: var(--white);
+  border: 1px solid rgba(15, 48, 87, 0.12);
+  border-left: 4px solid var(--accent-akane);
+  padding: 32px 36px 32px 56px;
+  margin-bottom: 28px;
+}
+.factsheet__quote-mark {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--accent-akane);
+  opacity: 0.4;
+}
+.factsheet__quote-body {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.95;
+  color: var(--ink);
+  font-weight: 500;
+}
+.factsheet__quote-body strong {
+  color: var(--accent-akane);
+  font-weight: 900;
+}
+
+.factsheet__usage {
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  text-align: center;
+}
+.factsheet__usage a {
+  color: var(--ink);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .factsheet { padding: 56px 0 64px; }
+  .factsheet__grid { grid-template-columns: repeat(2, 1fr); }
+  .factsheet__item { border-right: 1px solid rgba(15, 48, 87, 0.12); border-bottom: 1px solid rgba(15, 48, 87, 0.12); }
+  .factsheet__item:nth-child(4n) { border-right: 1px solid rgba(15, 48, 87, 0.12); }
+  .factsheet__item:nth-child(2n) { border-right: none; }
+  .factsheet__item:nth-last-child(-n+4) { border-bottom: 1px solid rgba(15, 48, 87, 0.12); }
+  .factsheet__item:nth-last-child(-n+2) { border-bottom: none; }
+  .factsheet__pullquote { padding: 24px 22px 24px 44px; }
+  .factsheet__quote-mark { font-size: 3rem; }
+}
+
+/* =====================================================================
+   ③ Media wall — 報道・掲載実績ウォール
+   ===================================================================== */
+.media-wall {
+  padding: 88px 0;
+}
+.media-wall__group {
+  margin-top: 36px;
+}
+.media-wall__group + .media-wall__group {
+  margin-top: 48px;
+}
+.media-wall__group-label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent-akane);
+  margin-bottom: 18px;
+}
+
+.media-wall__grid {
+  display: grid;
+  gap: 14px;
+}
+.media-wall__grid--news {
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.media-wall__grid--portal {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.media-wall__card {
+  background: var(--white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.media-wall__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--ink-3);
+}
+.media-wall__category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.media-wall__name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.media-wall__headline {
+  font-size: 0.95rem;
+  color: var(--accent-akane);
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 4px 0;
+  border-top: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border);
+  margin: 2px 0;
+}
+.media-wall__date {
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+.media-wall__note {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dotted var(--border);
+}
+
+/* ヒーロー級カード（毎日新聞）の強調 */
+.media-wall__card--hero {
+  border-color: var(--accent-akane);
+  border-width: 2px;
+  background:
+    linear-gradient(180deg, rgba(185, 79, 74, 0.04) 0%, var(--white) 60%);
+}
+.media-wall__card--hero .media-wall__name {
+  font-size: 1.4rem;
+}
+.media-wall__card--hero::before {
+  content: 'TOP';
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  background: var(--accent-akane);
+  color: var(--white);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+/* ポータルカードは小さく統一 */
+.media-wall__card--portal {
+  text-align: center;
+  align-items: center;
+  padding: 18px 12px;
+}
+.media-wall__card--portal .media-wall__name {
+  font-size: 0.98rem;
+}
+
+.media-wall .media-wall__note {
+  margin-top: 36px;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--text-light);
+  line-height: 1.85;
+}
+
+@media (max-width: 1023px) {
+  .media-wall__grid--news { grid-template-columns: 1fr 1fr; }
+  .media-wall__grid--portal { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 575px) {
+  .media-wall__grid--news { grid-template-columns: 1fr; }
+  .media-wall__grid--portal { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =====================================================================
+   ⑤ Case Study v2 — 実証ビジュアル（ギャラリー／新聞／GA4 ダッシュ）
+   ===================================================================== */
+.case__visuals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+.case__visual {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 14px 14px 18px;
+  transition: var(--transition);
+}
+.case__visual:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--mint);
+  transform: translateY(-2px);
+}
+.case__visual-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+/* (a) 31作品グリッド風 */
+.case__visual-img--gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+  padding: 6px;
+  background: rgba(15, 48, 87, 0.6);
+}
+.case__visual-img--gallery span {
+  border-radius: 3px;
+  display: block;
+}
+.case__visual-img--gallery span:nth-child(1)  { background: linear-gradient(135deg, #4a8c6f, #2a5e47); }
+.case__visual-img--gallery span:nth-child(2)  { background: linear-gradient(135deg, #c89b3c, #8a6420); }
+.case__visual-img--gallery span:nth-child(3)  { background: linear-gradient(135deg, #5a7eaa, #2a4a78); }
+.case__visual-img--gallery span:nth-child(4)  { background: linear-gradient(135deg, #b94f4a, #7a2e2a); }
+.case__visual-img--gallery span:nth-child(5)  { background: linear-gradient(135deg, #28a89a, #1f6e64); }
+.case__visual-img--gallery span:nth-child(6)  { background: linear-gradient(135deg, #6a4a8a, #3a2a5a); }
+.case__visual-img--gallery span:nth-child(7)  { background: linear-gradient(135deg, #3a7a5a, #1f4a3a); }
+.case__visual-img--gallery span:nth-child(8)  { background: linear-gradient(135deg, #d8a878, #8a6840); }
+.case__visual-img--gallery span:nth-child(9)  { background: linear-gradient(135deg, #4a6e9a, #1f3e6a); }
+.case__visual-img--gallery span:nth-child(10) { background: linear-gradient(135deg, #b04a6a, #7a2a4a); }
+.case__visual-img--gallery span:nth-child(11) { background: linear-gradient(135deg, #5aa89a, #2a7864); }
+.case__visual-img--gallery span:nth-child(12) { background: linear-gradient(135deg, #c87a40, #8a4a20); }
+
+/* (b) 新聞紙面風 */
+.case__visual-img--news {
+  background: var(--paper);
+  padding: 14px 16px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 4px;
+  color: var(--paper-ink);
+  font-family: var(--font-serif);
+  text-align: left;
+}
+.case__news-masthead {
+  font-size: 0.82rem;
+  font-weight: 900;
+  border-bottom: 2px solid var(--paper-ink);
+  padding-bottom: 3px;
+  letter-spacing: 0.04em;
+}
+.case__news-date {
+  font-size: 0.55rem;
+  color: rgba(42, 38, 32, 0.7);
+  text-align: right;
+  margin-top: 2px;
+}
+.case__news-headline {
+  font-size: clamp(0.86rem, 1.6vw, 1.05rem);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-top: 4px;
+  letter-spacing: -0.02em;
+}
+.case__news-deck {
+  font-size: 0.58rem;
+  line-height: 1.4;
+  color: rgba(42, 38, 32, 0.78);
+  font-weight: 500;
+}
+.case__news-cols {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3px;
+  margin-top: 4px;
+}
+.case__news-cols span {
+  display: block;
+  height: 18px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(42, 38, 32, 0.55) 0 1px,
+    transparent 1px 2.5px
+  );
+}
+
+/* (c) GA4ダッシュ風 */
+.case__visual-img--ga4 {
+  background: linear-gradient(180deg, #1a2942 0%, #0f1c30 100%);
+  padding: 14px 16px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 8px;
+  color: #cfe7e2;
+}
+.case__ga4-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: rgba(207, 231, 226, 0.78);
+}
+.case__ga4-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.18);
+  animation: hero-pulse 2.2s ease-in-out infinite;
+}
+.case__ga4-title {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.case__ga4-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 4px;
+}
+.case__ga4-big {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--mint);
+  line-height: 1;
+}
+.case__ga4-small {
+  font-size: 0.68rem;
+  color: rgba(207, 231, 226, 0.7);
+}
+.case__ga4-bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  align-items: end;
+  padding-top: 4px;
+}
+.case__ga4-bars span {
+  display: block;
+  height: var(--h, 50%);
+  min-height: 6px;
+  background: linear-gradient(180deg, var(--mint) 0%, var(--mint-2) 100%);
+  border-radius: 2px 2px 0 0;
+}
+
+.case__visual-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 4px 0;
+}
+.case__visual-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--mint);
+  text-transform: uppercase;
+}
+.case__visual-text {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+}
+.case__visual-text strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .case__visuals {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
