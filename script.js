@@ -10,7 +10,7 @@
 
   /* ---------- 1. フェードインアニメーション ---------- */
   const fadeTargets = document.querySelectorAll(
-    '.problem__card, .case__card, .voice, .value__card, .roles__col, .plan, .faq__item, .closing__body, .facts__item, .flow__step, .flow__roles, .ringi, .compare__wrap'
+    '.problem__card, .case__card, .voice, .value__card, .roles__col, .plan, .faq__item, .closing__body, .facts__item, .flow__step, .flow__roles, .ringi, .compare__wrap, .story, .stories__note'
   );
   fadeTargets.forEach((el) => el.classList.add('fade-up'));
 
