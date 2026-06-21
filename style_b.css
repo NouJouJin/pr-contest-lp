@@ -211,6 +211,15 @@
 }
 .value-feature__name { font-weight: 700; font-size: 0.96rem; color: var(--text); }
 .value-feature__creator { font-size: 0.82rem; color: var(--text-light); }
+.value-feature__prize--semi { background: var(--apricot-2); }
+
+/* GP＋準GP の縦並び */
+.value-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.value-features .value-feature { margin-bottom: 0; }
+
+/* カード内アクションボタン */
+.value-card__action { margin-top: 16px; }
+.value-card__action .btn { width: 100%; padding: 13px 24px; font-size: 0.92rem; }
 
 /* ③ 声 */
 .value-card__voices { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
