@@ -9,23 +9,23 @@
 /* ---------- CSS Variables ---------- */
 :root {
   --green-deep:  #2f6b57;
-  --green:       #4f9e83;
+  --green:       #367a64;
   --green-soft:  #7cbda7;
   --green-light: #e9f4ef;
   --green-mist:  #f3f8f5;
   --cream:       #fdfcf8;
-  --apricot:     #e89a64;
-  --apricot-2:   #d97f45;
+  --apricot:     #b85a27;
+  --apricot-2:   #a94f24;
   --apricot-lt:  #fdf1e7;
   --sun:         #f5d489;
   --white:       #ffffff;
   --text:        #33433c;
   --text-mid:    #5b6b63;
-  --text-light:  #8a9890;
+  --text-light:  #68786f;
   --border:      #e0eae4;
   --border-soft: #ecf3ee;
-  --grad-apricot: linear-gradient(135deg, #f0b083 0%, var(--apricot) 45%, var(--apricot-2) 100%);
-  --grad-green:   linear-gradient(135deg, #69b59c 0%, var(--green) 55%, #3f8a72 100%);
+  --grad-apricot: linear-gradient(135deg, #b85a27 0%, var(--apricot) 45%, var(--apricot-2) 100%);
+  --grad-green:   linear-gradient(135deg, #43806d 0%, var(--green) 55%, #285f4f 100%);
   --shadow:      0 6px 24px rgba(79, 158, 131, 0.1);
   --shadow-lg:   0 24px 56px -16px rgba(47, 107, 87, 0.22);
   --radius:      16px;
@@ -1016,7 +1016,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 767px) { .footer__cols { grid-template-columns: 1fr; gap: 30px; } }
 .footer__brand { font-weight: 900; font-size: 1.15rem; color: var(--white); letter-spacing: 0.02em; }
 .footer__brand-sub { font-size: 0.85rem; margin-top: 2px; color: rgba(255, 255, 255, 0.65); }
-.footer__addr { font-size: 0.8rem; margin-top: 12px; line-height: 1.9; color: rgba(255, 255, 255, 0.55); }
+.footer__addr { font-size: 0.8rem; margin-top: 12px; line-height: 1.9; color: rgba(255, 255, 255, 0.78); }
 .footer__head {
   font-weight: 700;
   color: var(--white);
@@ -1032,7 +1032,7 @@ button { font-family: inherit; cursor: pointer; }
 .footer__copy {
   text-align: center;
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.72);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 26px;
   letter-spacing: 0.06em;

@@ -19,17 +19,18 @@
   width: 100%;
   min-height: 533px;
   background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid #bfd6ca;
   border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(47, 107, 87, 0.12);
 }
 .airtable-form__fallback {
   margin-top: 16px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.88rem;
+  color: var(--text-mid);
+  font-size: 0.92rem;
   text-align: center;
 }
 .airtable-form__fallback a {
-  color: #fff;
+  color: var(--green-deep);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -287,14 +288,16 @@
   margin-top: 36px;
   padding: 22px 24px;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid #bfd6ca;
+  box-shadow: var(--shadow);
   text-align: center;
 }
 .media-bar__head {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.66);
+  color: var(--green-deep);
+  font-weight: 700;
   margin-bottom: 12px;
 }
 .media-bar__list {
@@ -307,12 +310,12 @@
 .media-bar__list li {
   font-weight: 700;
   font-size: 0.96rem;
-  color: var(--white);
+  color: var(--text);
 }
-.media-bar__list a { color: var(--sun); }
-.media-bar__list a:hover { color: var(--white); text-decoration: underline; }
-.media-bar__list span { color: rgba(255, 255, 255, 0.92); }
-.media-bar__note { font-size: 0.74rem; color: rgba(255, 255, 255, 0.5); }
+.media-bar__list a { color: var(--apricot-2); text-decoration: underline; text-underline-offset: 3px; }
+.media-bar__list a:hover { color: var(--green-deep); }
+.media-bar__list span { color: var(--text-mid); }
+.media-bar__note { font-size: 0.78rem; color: var(--text-mid); }
 
 /* =====================================================================
    S4 次につながる（概念図 / 出口）
@@ -462,7 +465,7 @@
 .closing { margin-top: 40px; text-align: center; }
 .closing__line {
   font-size: 1.02rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text);
   line-height: 1.9;
 }
 .closing__line--accent {
@@ -470,7 +473,7 @@
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 1.18rem;
   font-weight: 700;
-  color: var(--sun);
+  color: var(--green-deep);
 }
 
 /* ---------- フェードイン（script_b.js 連携） ---------- */
