@@ -4,29 +4,41 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="format-detection" content="telephone=no" />
-<title>自治体PR動画コンテスト 公募｜「白井市方式」を、あなたの街でも。 | Metagri研究所</title>
-<meta name="description" content="動画生成AI×全国クリエイター×公式素材で、1か月31作品・全国紙掲載・公募ポータル5媒体並列掲載を実現した「白井市方式」。次の連携自治体を募集します。観光PR・移住定住・ふるさと納税・シティプロモーション担当者向け公募LP。" />
+<title>自治体PR動画コンテスト 公募｜街を語る人が"増える"PR動画コンテスト | Metagri研究所</title>
+<meta name="description" content="PR動画を外注して終わり、ではない。全国のクリエイターと視聴者が共創し、街を語る人が増え、その視点が次の地方創生企画につながる。千葉県白井市で実証した「白井市方式」を、次の自治体とご一緒します。無料30分相談を受付中。" />
 <meta name="robots" content="index,follow" />
-<meta name="theme-color" content="#0f3057" />
+<meta name="theme-color" content="#4f9e83" />
 
 <!-- OGP -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="自治体PR動画コンテスト 公募 | Metagri研究所" />
 <meta property="og:locale" content="ja_JP" />
-<meta property="og:title" content="自治体PR動画コンテスト 公募｜「白井市方式」を、あなたの街でも。" />
-<meta property="og:description" content="1か月31作品・全国紙掲載・GA4実証データ付き。動画生成AI×全国クリエイターで、街の魅力を語る人を全国に増やす共創型コンテスト。連携自治体を募集中。" />
+<meta property="og:title" content="街を語る人が&quot;増える&quot;PR動画コンテスト｜白井市方式を次の自治体へ" />
+<meta property="og:description" content="外注＝完成物を買う、ではない。多様な視点が集まり、公式採用できる成果物が残り、関係人口の芽が育つ。白井市で実証済みの共創型PRコンテスト。連携自治体を募集中。" />
+<meta property="og:image" content="https://i.ytimg.com/vi/-QzFBNrApH0/hqdefault.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="自治体PR動画コンテスト 公募｜「白井市方式」を、あなたの街でも。" />
-<meta name="twitter:description" content="1か月31作品・全国紙掲載・GA4実証データ付き。動画生成AI×全国クリエイターで、街の魅力を語る人を全国に増やす共創型コンテスト。" />
+<meta name="twitter:title" content="街を語る人が&quot;増える&quot;PR動画コンテスト｜白井市方式を次の自治体へ" />
+<meta name="twitter:description" content="多様な視点が集まり、公式採用できる成果物が残り、関係人口の芽が育つ。白井市で実証済みの共創型PRコンテスト。" />
+<meta name="twitter:image" content="https://i.ytimg.com/vi/-QzFBNrApH0/hqdefault.jpg" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Zen+Kaku+Gothic+New:wght@500;700;900&amp;display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style_v3.css" />
+<link rel="stylesheet" href="style_b.css" />
+
+<!-- GA4（公開時に測定IDを差し替え） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+</script>
 </head>
-<body>
+<body data-lp="case-b">
 <div id="lp">
 
 <!-- ===== ヘッダーナビ ===== -->
@@ -37,586 +49,447 @@
       <span class="nav__logo-main">自治体PR動画コンテスト 公募</span>
     </a>
     <nav class="nav__menu">
+      <a href="#value" class="nav__link">4つの価値</a>
       <a href="#case" class="nav__link">白井市の実証</a>
-      <a href="#value" class="nav__link">提供価値</a>
+      <a href="#next" class="nav__link">次につながる</a>
       <a href="#plans" class="nav__link">プラン</a>
       <a href="#faq" class="nav__link">FAQ</a>
-      <a href="#apply" class="nav__cta">公募に応募</a>
+      <a href="#apply" class="nav__cta" data-cta="nav">無料相談</a>
     </nav>
   </div>
 </header>
 
-<!-- ===== ① ヒーロー ===== -->
-<section id="top" class="hero">
-  <div class="hero__bg" aria-hidden="true"></div>
+<!-- ===== S1 ヒーロー ===== -->
+<section id="top" class="hero hero--b">
+  <div class="hero__mosaic" aria-hidden="true">
+    <div class="hero__mosaic-grid" id="heroMosaic"></div>
+    <div class="hero__mosaic-veil"></div>
+  </div>
   <div class="hero__inner">
-    <p class="hero__eyebrow">FOR LOCAL GOVERNMENT &nbsp;|&nbsp; Metagri研究所 共創公募</p>
+    <div class="hero__chip" role="status">
+      <span class="hero__chip-dot" aria-hidden="true"></span>
+      <span class="hero__chip-strong">連携自治体 募集中</span>
+      <span class="hero__chip-sub">FOR LOCAL GOVERNMENT</span>
+    </div>
     <h1 class="hero__title">
-      <span class="hero__title-line">街の魅力を、</span>
-      <span class="hero__title-line"><span class="hero__accent">語る人ごと</span>全国に増やす。</span>
+      <span class="hero__title-line">街を語る人が、<em class="hero__em">"増える"</em>。</span>
+      <span class="hero__title-line"><strong class="hero__accent">そんなPR動画<span class="nw">コンテスト</span></strong>です。</span>
     </h1>
     <p class="hero__lead">
-      動画生成AI × 全国クリエイター × 公式素材で、<br />
-      1か月 <strong>31作品</strong>・<strong>全国紙掲載</strong>・<strong>公募ポータル5媒体並列掲載</strong>を実現した<br />
-      <strong>「白井市方式」</strong>を、次のパートナー自治体と共創します。
+      PR動画を外注して、納品されて終わり ── ではありません。<br />
+      全国のクリエイターと視聴者が<strong>共創</strong>し、街を語る人が増え、<br class="pc-only" />
+      その視点が<strong>次の地方創生企画</strong>につながっていく。
     </p>
 
-    <ul class="hero__stats">
-      <li>
-        <span class="hero__stat-num">31<span class="unit">作品</span></span>
-        <span class="hero__stat-label">1か月で全国から応募</span>
-      </li>
-      <li>
-        <span class="hero__stat-num">28<span class="unit">名</span></span>
-        <span class="hero__stat-label">クリエイターが街と深接触</span>
-      </li>
-      <li>
-        <span class="hero__stat-num">19.4<span class="unit">%</span></span>
-        <span class="hero__stat-label">が「住みたい／関わりたい」自発表明</span>
-      </li>
-      <li>
-        <span class="hero__stat-num">8<span class="unit">分37秒</span></span>
-        <span class="hero__stat-label">Organic Search 平均滞在時間</span>
-      </li>
-    </ul>
+    <p class="hero__proof">
+      <span class="hero__proof-mark">実証済み</span>
+      千葉県白井市で、1か月に<strong>31通りの視点</strong>が集まり、<strong>1本が市の公式PR動画に採用</strong>されました。
+    </p>
 
     <div class="hero__cta">
-      <a href="#apply" class="btn btn--primary">📨 公募フォームへ進む</a>
-      <a href="#case" class="btn btn--ghost">📊 白井市の実証を見る</a>
+      <a href="#apply" class="btn btn--primary" data-cta="hero">無料30分相談を申し込む</a>
+      <a href="#value" class="btn btn--ghost">4つの価値を見る</a>
     </div>
 
     <p class="hero__note">
-      ※ 観光PR／特産品・ふるさと納税／移住定住／シティプロモーション／イベント・祭り — 全領域で連携実績あり。<br />
-      ※ 予算は <strong>0円のテスト規模から100万円以上のフル実装</strong>まで4プランをご用意。フォームでご希望規模をお選びください。
+      観光PR／ふるさと納税／移住定住／シティプロモーション ── 全領域で活用可能。<br />
+      予算0円のテストから始められます。
     </p>
   </div>
 </section>
 
-<!-- ===== ② 課題提示 ===== -->
-<section id="problem" class="section section--white">
+<!-- ===== S2 4つの価値 ===== -->
+<section id="value" class="section section--white">
   <div class="container">
-    <p class="section__eyebrow">この公募の前提</p>
-    <h2 class="section__title">いまの自治体PR、<br class="sp-only" />こんな悩みありませんか？</h2>
+    <p class="section__eyebrow">WHY CONTEST ── 外注では手に入らないもの</p>
+    <h2 class="section__title">「1本買う」のではなく、<br class="sp-only" />「4つの価値」が残ります。</h2>
     <p class="section__lead">
-      全国の自治体担当者（広報／企画政策／移住定住／ふるさと納税）と話すなかで、<br />
-      ほぼ全てに共通する3つの構造課題があります。
+      同じ予算でも、得られるものがまるで違う。<br />
+      白井市の実証から見えた、コンテスト型ならではの4つの価値です。
     </p>
 
-    <div class="problem__grid">
-      <div class="problem__card">
-        <div class="problem__num">01</div>
-        <h3 class="problem__head">動画制作費が高い</h3>
-        <p class="problem__body">
-          プロモ動画1本に <strong>50〜300万円</strong>。<br />
-          差し替えやA/Bテストは現実的に回らず、「1本撮ったら終わり」になりがち。
+    <div class="values">
+      <!-- ① 多様な視点 -->
+      <article class="value-card">
+        <p class="value-card__no">01</p>
+        <h3 class="value-card__title">多様な視点が、一気に集まる</h3>
+        <p class="value-card__body">
+          1社のディレクションでは生まれない切り口が、全国のクリエイターから集まります。白井市では<strong>31通りの視点</strong>が、自然と<strong>「4つの物語」</strong>に分かれました。
         </p>
-      </div>
-      <div class="problem__card">
-        <div class="problem__num">02</div>
-        <h3 class="problem__head">若年層・関係人口に届かない</h3>
-        <p class="problem__body">
-          公式SNSや広報誌は既存住民に止まり、<br />
-          <strong>20-30代</strong>や市外の興味層に届ける経路が乏しい。
+        <div class="value-card__thumbs" aria-label="4つの物語の代表作品">
+          <a class="vthumb" href="https://www.youtube.com/watch?v=BWNOij_828o" target="_blank" rel="noopener noreferrer" data-cta="value-thumb">
+            <img loading="lazy" src="https://i.ytimg.com/vi/BWNOij_828o/mqdefault.jpg" alt="移住物語の代表作品" />
+            <span class="vthumb__tag">移住物語</span>
+          </a>
+          <a class="vthumb" href="https://www.youtube.com/watch?v=Btva7TyNmEA" target="_blank" rel="noopener noreferrer" data-cta="value-thumb">
+            <img loading="lazy" src="https://i.ytimg.com/vi/Btva7TyNmEA/mqdefault.jpg" alt="地元視点の代表作品" />
+            <span class="vthumb__tag">地元視点</span>
+          </a>
+          <a class="vthumb" href="https://www.youtube.com/watch?v=NEnJQW8iUK0" target="_blank" rel="noopener noreferrer" data-cta="value-thumb">
+            <img loading="lazy" src="https://i.ytimg.com/vi/NEnJQW8iUK0/mqdefault.jpg" alt="子ども目線の代表作品" />
+            <span class="vthumb__tag">子ども目線</span>
+          </a>
+          <a class="vthumb" href="https://www.youtube.com/watch?v=-QzFBNrApH0" target="_blank" rel="noopener noreferrer" data-cta="value-thumb">
+            <img loading="lazy" src="https://i.ytimg.com/vi/-QzFBNrApH0/mqdefault.jpg" alt="ファンタジーの代表作品" />
+            <span class="vthumb__tag">ファンタジー</span>
+          </a>
+        </div>
+        <p class="value-card__metric"><strong>31作品</strong>／全国28名のクリエイター</p>
+        <div class="value-card__action">
+          <a class="btn btn--ghost" href="https://shiroi-pr-video-contest.metagri-labo.com/gallery" target="_blank" rel="noopener noreferrer" data-cta="value-archive">全31作品のアーカイブを見る</a>
+        </div>
+      </article>
+
+      <!-- ② 公式採用される成果物 -->
+      <article class="value-card">
+        <p class="value-card__no">02</p>
+        <h3 class="value-card__title">そのまま使える、公式採用の成果物</h3>
+        <p class="value-card__body">
+          「作って終わり」ではなく、<strong>市の公式PR動画として採用</strong>し、移住定住イベント・常設放映・デジタルサイネージで実活用。受賞6作品が、用途別の"使える素材"として残りました。
         </p>
-      </div>
-      <div class="problem__card">
-        <div class="problem__num">03</div>
-        <h3 class="problem__head">担当者が多忙でPDCAが回らない</h3>
-        <p class="problem__body">
-          1本作っても効果検証が回らず、<br />
-          <strong>「刺さる切り口」</strong>を発見する前に予算サイクルが切れてしまう。
+        <div class="value-features">
+          <a class="value-feature" href="https://www.youtube.com/watch?v=-QzFBNrApH0" target="_blank" rel="noopener noreferrer" data-cta="value-grandprix">
+            <span class="value-feature__thumb">
+              <img loading="lazy" src="https://i.ytimg.com/vi/-QzFBNrApH0/mqdefault.jpg" alt="グランプリ作品 白井市クエスト" />
+              <span class="badge-official">公式PR動画 採用</span>
+            </span>
+            <span class="value-feature__meta">
+              <span class="value-feature__prize">グランプリ</span>
+              <span class="value-feature__name">No.19「白井市クエスト」</span>
+              <span class="value-feature__creator">ししゃも</span>
+            </span>
+          </a>
+          <a class="value-feature" href="https://www.youtube.com/watch?v=oWqKbm8wnNE" target="_blank" rel="noopener noreferrer" data-cta="value-semigrandprix">
+            <span class="value-feature__thumb">
+              <img loading="lazy" src="https://i.ytimg.com/vi/oWqKbm8wnNE/mqdefault.jpg" alt="準グランプリ作品 のびのび暮らそう！白井市" />
+            </span>
+            <span class="value-feature__meta">
+              <span class="value-feature__prize value-feature__prize--semi">準グランプリ</span>
+              <span class="value-feature__name">No.17「のびのび暮らそう！白井市」</span>
+              <span class="value-feature__creator">田中大介</span>
+            </span>
+          </a>
+        </div>
+        <p class="value-card__metric"><strong>受賞6作品</strong>が用途別に実活用へ</p>
+        <div class="value-card__action">
+          <a class="btn btn--ghost" href="https://shiroi-pr-video-contest.metagri-labo.com/awards" target="_blank" rel="noopener noreferrer" data-cta="value-awards">受賞作品一覧を見る</a>
+        </div>
+      </article>
+
+      <!-- ③ 関係人口の芽 -->
+      <article class="value-card">
+        <p class="value-card__no">03</p>
+        <h3 class="value-card__title">関係人口の"芽"が、生まれる</h3>
+        <p class="value-card__body">
+          街を描く過程そのものが、その街を好きになる時間に。応募者から、移住・来訪・ふるさと納税への関心が<strong>自発的に</strong>表明されました。
         </p>
-      </div>
+        <div class="value-card__voices">
+          <blockquote class="vvoice"><p>「私も移住したい…！と思うくらい白井市が好きになった」</p><cite>— おゆき</cite></blockquote>
+          <blockquote class="vvoice"><p>「今後はふるさと納税などを通じて市政の力添えができれば」</p><cite>— yoppy</cite></blockquote>
+          <blockquote class="vvoice"><p>「穏やかな空気に魅了され、いつか必ず訪れてみたい」</p><cite>— Shinpei Kojima（遠方在住）</cite></blockquote>
+        </div>
+        <p class="value-card__metric"><strong>31名中6名</strong>が「住みたい／訪れたい／関わりたい」と自発表明</p>
+      </article>
+
+      <!-- ④ 庁内のAI受容度向上 -->
+      <article class="value-card">
+        <p class="value-card__no">04</p>
+        <h3 class="value-card__title">庁内の"AIアレルギー"が、ほどける</h3>
+        <p class="value-card__body">
+          身近な街の写真が、AIで動き出す。その体験が、庁内での生成AIへの心理的ハードルを下げ、次の取り組みへの土壌をつくります。
+        </p>
+        <div class="value-aiquote">
+          <span class="value-aiquote__icon" aria-hidden="true">✦</span>
+          <p class="value-aiquote__text">「止まっていた街の画像が、動いた」</p>
+          <p class="value-aiquote__sub">同じ素材42枚から、誰でもプロ品質の映像が生まれる体験</p>
+        </div>
+        <p class="value-card__metric">PR施策が、<strong>庁内のAI実装の入口</strong>になる</p>
+      </article>
     </div>
 
-    <div class="problem__answer">
-      <p class="problem__answer-pre">そこで、私たちの提案は</p>
-      <p class="problem__answer-main">
-        <strong>「動画生成AI × 全国クリエイター × 公式素材」</strong>を掛け合わせた<br class="sp-only" />
-        <span class="problem__answer-em">共創型コンテスト</span>。
-      </p>
-      <p class="problem__answer-sub">
-        単発動画外注 <strong>1本ぶんの予算</strong>で、<br />
-        <strong>31本＋メイキング＋全国紙掲載＋公募ポータル5媒体＋GA4の質的データ</strong>が同時に手に入ります。
-      </p>
+    <div class="section__cta">
+      <a href="#apply" class="btn btn--primary" data-cta="value-end">この4つを、自分の街で。無料30分相談へ</a>
     </div>
   </div>
 </section>
 
-<!-- ===== ③ 白井市の実証ファクト ===== -->
+<!-- ===== S3 白井市実証 ===== -->
 <section id="case" class="section section--ink">
   <div class="container">
-    <p class="section__eyebrow section__eyebrow--light">CASE STUDY · 白井市（千葉県）</p>
-    <h2 class="section__title section__title--light">
-      初の自治体連携で、<br class="sp-only" />ここまでの数字が出ました。
-    </h2>
+    <p class="section__eyebrow section__eyebrow--light">CASE STUDY · 千葉県白井市（2026年4月15日〜5月15日）</p>
+    <h2 class="section__title section__title--light">白井市で、<br class="sp-only" />たしかに起きたこと。</h2>
     <p class="section__lead section__lead--light">
-      千葉県白井市 × Metagri研究所の共催で、2026年4月15日〜5月15日に実施。<br />
-      応募・露出・視聴・関係人口化の各層で、自治体PRの新しい標準値が見えました。
+      初めての試みで、1か月。広告費をかけずに、街の話題と"使える素材"が積み上がりました。
     </p>
 
-    <div class="case__grid">
-      <div class="case__card">
-        <p class="case__label">応募・参加</p>
-        <p class="case__big">31<span class="case__unit">作品</span></p>
-        <p class="case__text">
-          応募クリエイター <strong>28名</strong>（3名が2作品応募）。<br />
-          応募期間 <strong>1か月</strong>。プロ志望／AI初心者／<strong>64歳のシニア</strong>／在住者／遠方未訪問者まで多層。
-        </p>
-      </div>
-
-      <div class="case__card">
-        <p class="case__label">メディア露出（広告費0円）</p>
-        <p class="case__big">7<span class="case__unit">媒体以上</span></p>
-        <p class="case__text">
-          <strong>毎日新聞</strong>「狙うは人口増」が Yahoo!ニュース／dメニュー／au Webポータルへ同時配信。<br />
-          <strong>公募ポータル</strong>：Koubo／公募データベース／登竜門／デジタル人材共創連盟／コボナビの<strong>5媒体並列</strong>。
-        </p>
-      </div>
-
-      <div class="case__card">
-        <p class="case__label">視聴・行動（GA4実測）</p>
-        <p class="case__big">147<span class="case__unit">名</span></p>
-        <p class="case__text">
-          ギャラリー28日アクティブユーザー147名・視聴イベント<strong>1,143回</strong>・イベント合計<strong>3,712件</strong>。<br />
-          Direct平均滞在時間 <strong>3分08秒</strong>／Organic Search <strong>8分37秒</strong>＝<em>濃いファン回遊</em>。
-        </p>
-      </div>
-
-      <div class="case__card">
-        <p class="case__label">関係人口化</p>
-        <p class="case__big">19.4<span class="case__unit">%</span></p>
-        <p class="case__text">
-          応募者 <strong>31名中6名</strong>が「住みたい／いつか訪れたい／ふるさと納税で関わりたい」と<strong>自発表明</strong>。<br />
-          広告では絶対に買えない種類の「街への深接触時間」がここに発生しています。
-        </p>
-      </div>
+    <div class="facts facts--compact">
+      <div class="facts__item"><p class="facts__num">31<span>作品</span></p><p class="facts__label">応募作品（初回・1か月）</p></div>
+      <div class="facts__item"><p class="facts__num">28<span>名</span></p><p class="facts__label">全国の応募クリエイター</p></div>
+      <div class="facts__item"><p class="facts__num">1<span>本</span></p><p class="facts__label">市の公式PR動画として採用</p></div>
+      <div class="facts__item"><p class="facts__num">全国紙</p><p class="facts__label">毎日新聞掲載 → 3媒体に同時配信</p></div>
+      <div class="facts__item"><p class="facts__num">¥0</p><p class="facts__label">上記メディア露出の広告費</p></div>
     </div>
 
-    <!-- 実際の声 -->
-    <div class="voices">
-      <h3 class="voices__head">応募クリエイターの一次コメント（原文ママ）</h3>
-      <div class="voices__grid">
-        <blockquote class="voice">
-          <p>「すっかり白井市の穏やかな空気に魅了され、<br /><strong>いつか必ず訪れてみたい</strong>」</p>
-          <cite>— Shinpei Kojima（遠方在住）</cite>
-        </blockquote>
-        <blockquote class="voice">
-          <p>「<strong>私も移住したい…！</strong>と思うくらい白井市が好きになった」</p>
-          <cite>— おゆき</cite>
-        </blockquote>
-        <blockquote class="voice">
-          <p>「制作を終えた今では少し愛着を感じており、<br /><strong>今後はふるさと納税などを通じて市政の力添えができれば</strong>」</p>
-          <cite>— yoppy</cite>
-        </blockquote>
-        <blockquote class="voice">
-          <p>「白井市の住環境や子育ての魅力を<strong>改めて考えるきっかけになった</strong>」</p>
-          <cite>— まさるん</cite>
-        </blockquote>
-        <blockquote class="voice">
-          <p>「『住みたい』へと直接誘うのではなく…<strong>『しろいって、なんかおもしろそう』への入口</strong>」</p>
-          <cite>— @HH56099005</cite>
-        </blockquote>
-        <blockquote class="voice">
-          <p>「<strong>自治体目線の映像を作ってみたかった</strong>」</p>
-          <cite>— TERAS Echo</cite>
-        </blockquote>
-      </div>
+    <div class="media-bar">
+      <p class="media-bar__head">掲載・配信メディア</p>
+      <ul class="media-bar__list">
+        <li><a href="https://mainichi.jp/" target="_blank" rel="noopener noreferrer" data-cta="media">毎日新聞（千葉版）</a></li>
+        <li><span>Yahoo!ニュース</span></li>
+        <li><span>公募ポータル 5媒体 並列掲載</span></li>
+      </ul>
+      <p class="media-bar__note">※媒体名は掲載実績の表記です。ロゴ掲出は各社の許諾範囲に従います。</p>
     </div>
 
     <div class="case__links">
-      <a href="https://metagri-labo.com/metagri-shiroi-pr-video-contest/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost-light">▶ コンテストTOPを見る</a>
-      <a href="https://shiroi-pr-video-contest.metagri-labo.com/gallery" target="_blank" rel="noopener noreferrer" class="btn btn--ghost-light">▶ 31作品のギャラリーを見る</a>
-      <a href="https://note.com/noujoujin/n/n3f6edd912ef4" target="_blank" rel="noopener noreferrer" class="btn btn--ghost-light">▶ 審査の裏側noteを読む</a>
+      <a href="https://shiroi-pr-video-contest.metagri-labo.com/awards" target="_blank" rel="noopener noreferrer" class="btn btn--ghost-light" data-cta="case-awards">受賞作品一覧を見る</a>
+      <a href="https://shiroi-pr-video-contest.metagri-labo.com/gallery" target="_blank" rel="noopener noreferrer" class="btn btn--ghost-light" data-cta="case-gallery">全31作品のアーカイブを見る</a>
     </div>
   </div>
 </section>
 
-<!-- ===== ④ 3つの提供価値 ===== -->
-<section id="value" class="section section--white">
+<!-- ===== S4 次につながる ===== -->
+<section id="next" class="section section--mist">
   <div class="container">
-    <p class="section__eyebrow">3つの提供価値</p>
-    <h2 class="section__title">単発動画では、<br class="sp-only" />絶対に届かない3つの価値。</h2>
-
-    <div class="value__grid">
-      <article class="value__card">
-        <div class="value__no">V1</div>
-        <h3 class="value__head">広報レバレッジ</h3>
-        <p class="value__sub">1本ぶんの予算で「31本＋ニュース＋ポータル＋音声」を同時調達</p>
-        <ul class="value__list">
-          <li>単発動画外注（1本50〜300万円）と同等以下の運営費で、<strong>31本＋メイキング31本</strong>。</li>
-          <li>グランプリ作品は<strong>市公式PR動画として正式採用</strong>。1本の高品質動画は通常通り得たうえで、副産物として30本のバリエーションが残る。</li>
-          <li>制作プロセス記述 <strong>約19,400字</strong>を、公式note・広報誌・特設Webの二次素材としてそのまま流用可能。</li>
-        </ul>
-      </article>
-
-      <article class="value__card">
-        <div class="value__no">V2</div>
-        <h3 class="value__head">関係人口創出</h3>
-        <p class="value__sub">制作プロセスそのものが「街への深接触」を生む</p>
-        <ul class="value__list">
-          <li>1クリエイターが1自治体に注ぐ時間は <strong>数十〜100時間超</strong>。広告では買えない接触。</li>
-          <li>応募者の19.4%が「住みたい／ふるさと納税で関わりたい」と自発表明（白井市実証）。</li>
-          <li>在住者・元住民・未訪問の遠方クリエイターまで、それぞれが <strong>「街を語る人」</strong>になっていく。</li>
-        </ul>
-      </article>
-
-      <article class="value__card">
-        <div class="value__no">V3</div>
-        <h3 class="value__head">多解釈で街の輪郭化</h3>
-        <p class="value__sub">1本では絶対に出せない「街の多面性」が同時に可視化</p>
-        <ul class="value__list">
-          <li>31作品＝31通りの「街の入口」。移住物語／地元視点／子ども目線／ファンタジー の<strong>4分類</strong>が自然発生。</li>
-          <li>行政視点では絶対に出せない切り口（ミツバチFPV／RPG風／プレゼン形式）が同時に立ち上がる。</li>
-          <li>「見られる動画」と「選ばれる動画」のズレまでGA4で可視化＝<strong>翌年以降の内製PR羅針盤</strong>に。</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ⑤ 他施策との比較 ===== -->
-<section id="compare" class="section section--mist">
-  <div class="container">
-    <p class="section__eyebrow">他施策との比較</p>
-    <h2 class="section__title">既存の自治体PR施策と、<br class="sp-only" />同じ土俵で比べてください。</h2>
+    <p class="section__eyebrow">WHAT'S NEXT</p>
+    <h2 class="section__title">コンテストは、<br class="sp-only" />ゴールではなく、起点です。</h2>
     <p class="section__lead">
-      担当者の頭の中にある「これまでやってきた／検討中の施策」と、<br />
-      白井市方式を <strong>同じ予算規模</strong>で比較するための整理です。
+      集まった「31通りの視点」は、コンテストが終わっても消えません。<br />
+      それは、次の地方創生企画を考えるときの"資産"になります。
     </p>
 
-    <div class="compare__wrap">
-      <table class="compare__table">
-        <thead>
-          <tr>
-            <th scope="col">施策タイプ</th>
-            <th scope="col">コスト感（目安）</th>
-            <th scope="col">期間</th>
-            <th scope="col">成果物</th>
-            <th scope="col">関係人口効果</th>
-            <th scope="col">データ取得</th>
-            <th scope="col">二次資産化</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="is-hero-row">
-            <th scope="row">白井市方式（動画AI×コンテスト）</th>
-            <td>単発動画外注1本ぶん相当</td>
-            <td>約4か月（準備2＋募集1＋審査1）</td>
-            <td><strong>31本動画＋メイキング31本＋全国紙＋公式PR動画1本</strong></td>
-            <td><strong>高</strong>（応募者全員が深接触）</td>
-            <td><strong>GA4＋投票で質的取得</strong></td>
-            <td><strong>note・広報誌・SNS素材で直接流用</strong></td>
-          </tr>
-          <tr>
-            <th scope="row">動画外注（PR会社・代理店）</th>
-            <td>1本 50〜300万円</td>
-            <td>2〜3か月</td>
-            <td>プロ品質1本</td>
-            <td>ほぼ無</td>
-            <td>再生数のみ</td>
-            <td>動画素材1本のみ</td>
-          </tr>
-          <tr>
-            <th scope="row">インフルエンサー施策</th>
-            <td>1人 30〜200万円／回</td>
-            <td>1か月</td>
-            <td>投稿数本</td>
-            <td>一過性</td>
-            <td>エンゲージ数値</td>
-            <td>契約次第</td>
-          </tr>
-          <tr>
-            <th scope="row">SNS広告（Meta／TikTok等）</th>
-            <td>月 10〜100万円〜</td>
-            <td>連続運用</td>
-            <td>配信レポート</td>
-            <td>無（広告接触のみ）</td>
-            <td>配信指標</td>
-            <td>広告クリエイティブのみ</td>
-          </tr>
-          <tr>
-            <th scope="row">ふるさと納税ポータル広告</th>
-            <td>月 数十万円〜</td>
-            <td>連続運用</td>
-            <td>寄附数値</td>
-            <td>寄附者と1回</td>
-            <td>寄附データ</td>
-            <td>返礼品に依存</td>
-          </tr>
-          <tr>
-            <th scope="row">移住特設サイト・パンフレット</th>
-            <td>制作 100〜500万円</td>
-            <td>3〜6か月</td>
-            <td>静的コンテンツ</td>
-            <td>検索流入頼み</td>
-            <td>アクセスログ</td>
-            <td>サイト・冊子のみ</td>
-          </tr>
-          <tr>
-            <th scope="row">移住イベント・ツアー</th>
-            <td>1回 50〜200万円</td>
-            <td>数日〜1か月準備</td>
-            <td>参加者数十名</td>
-            <td>濃い接点</td>
-            <td>アンケート</td>
-            <td>レポートのみ</td>
-          </tr>
-          <tr>
-            <th scope="row">他自治体動画コンテスト（高校生対象）</th>
-            <td>30〜100万円</td>
-            <td>3〜6か月</td>
-            <td>数〜数十本</td>
-            <td>地元住民の接点</td>
-            <td>応募データのみ</td>
-            <td>地元向け素材</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="compare__note">
-      ※ 同じ目的（街の魅力を伝える）に対して、<strong>「どこに予算を置くか」</strong>で得られるアウトプットの構造が大きく変わります。<br />
-      ※ 白井市方式は「動画外注枠」「シティプロモーション政策枠」「関係人口創出枠」のいずれの政策事業費にも紐付け可能です。
-    </p>
-  </div>
-</section>
-
-<!-- ===== ⑥ 役割分担 ===== -->
-<section id="roles" class="section section--white">
-  <div class="container">
-    <p class="section__eyebrow">役割分担</p>
-    <h2 class="section__title">自治体側は<br class="sp-only" />「素材提供と最終審査」に集中できます。</h2>
-    <p class="section__lead">
-      LP・ギャラリー・データ取得・全国メディア露出は、<br />
-      白井市で実装済みのテンプレを <strong>そのまま流用</strong>します。
-    </p>
-
-    <div class="roles__grid">
-      <div class="roles__col roles__col--gov">
-        <h3 class="roles__head">自治体側</h3>
-        <ul class="roles__list">
-          <li><strong>テーマ設計</strong>：ターゲット・キーメッセージのご提示</li>
-          <li><strong>素材提供</strong>：写真30〜50枚をカテゴリ整理（テンプレ提供あり）</li>
-          <li><strong>地元発信</strong>：地元紙・市公式SNSでの一次告知</li>
-          <li><strong>公式審査</strong>：グランプリ・準グランプリの最終決定</li>
-          <li><strong>二次活用</strong>：公式PR動画として採用、広報誌・サイネージ等への展開</li>
-        </ul>
+    <div class="concept" role="img" aria-label="コンテストで集めた視点が蓄積され、次の企画につながる3ステップ">
+      <div class="concept__step">
+        <span class="concept__icon" aria-hidden="true">🎬</span>
+        <p class="concept__num">STEP 1</p>
+        <p class="concept__name">コンテスト</p>
+        <p class="concept__desc">多様なクリエイターが、街を多面的に描く</p>
       </div>
-
-      <div class="roles__col roles__col--metagri">
-        <h3 class="roles__head">Metagri研究所側<br /><span class="roles__sub">（株式会社農情人）</span></h3>
-        <ul class="roles__list">
-          <li><strong>LP／ギャラリー構築</strong>：Vercel＋entries.json駆動で白井市テンプレを流用</li>
-          <li><strong>応募フォーム</strong>：Airtable連携（白井市実装済）</li>
-          <li><strong>全国メディア露出</strong>：@press・公募ポータル5媒体・全国紙アプローチ</li>
-          <li><strong>クリエイター動員</strong>：Metagri研究所1,300人＋外部ネットワーク</li>
-          <li><strong>データ取得</strong>：GA4実装・週次レポート提出</li>
-          <li><strong>主催記事</strong>：応募開始／中間／ギャラリー／審査裏側／結果発表の5段階note</li>
-          <li><strong>特別賞・参考投票</strong>の運営</li>
-        </ul>
+      <span class="concept__arrow" aria-hidden="true">→</span>
+      <div class="concept__step">
+        <span class="concept__icon" aria-hidden="true">🗂️</span>
+        <p class="concept__num">STEP 2</p>
+        <p class="concept__name">視点の蓄積</p>
+        <p class="concept__desc">作品・声・GA4の反応データが、街の"魅力の地図"に</p>
+      </div>
+      <span class="concept__arrow" aria-hidden="true">→</span>
+      <div class="concept__step">
+        <span class="concept__icon" aria-hidden="true">🌱</span>
+        <p class="concept__num">STEP 3</p>
+        <p class="concept__name">次の企画</p>
+        <p class="concept__desc">蓄積した視点を、次の施策の起点として活かす</p>
       </div>
     </div>
+
+    <div class="next-outlets">
+      <p class="next-outlets__head">"次に活きる出口"の例</p>
+      <ul class="next-outlets__list">
+        <li><span class="next-outlets__icon" aria-hidden="true">📖</span>受賞作の視点を、<strong>移住パンフレット</strong>の構成に転用</li>
+        <li><span class="next-outlets__icon" aria-hidden="true">🎪</span>反応の良かったテーマを、<strong>イベント・祭りの打ち出し</strong>に</li>
+        <li><span class="next-outlets__icon" aria-hidden="true">🎁</span>共感を集めた切り口を、<strong>ふるさと納税の訴求</strong>に展開</li>
+      </ul>
+      <p class="next-outlets__body">
+        私たちは作って渡して終わりにせず、集まった視点を「次にどう活かすか」まで<strong>伴走</strong>します。
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- ===== ⑦ 予算プラン ===== -->
+<!-- ===== S5 進め方 ===== -->
+<section id="flow" class="section section--white">
+  <div class="container">
+    <p class="section__eyebrow">HOW IT WORKS</p>
+    <h2 class="section__title">標準4か月。<br class="sp-only" />自治体側がやることは、5つだけ。</h2>
+    <p class="section__lead">
+      運営・集客・データ取得は、白井市で実装済みのテンプレートをそのまま流用します。
+    </p>
+
+    <div class="timeline">
+      <div class="timeline__track" aria-hidden="true"></div>
+      <ol class="timeline__steps">
+        <li class="timeline__step">
+          <span class="timeline__dot"></span>
+          <p class="timeline__phase">準備</p>
+          <p class="timeline__span">約2か月</p>
+          <p class="timeline__desc">テーマ設計・素材整理（写真30〜50枚／テンプレ提供）・地元紙と公式SNSでの一次告知</p>
+        </li>
+        <li class="timeline__step">
+          <span class="timeline__dot"></span>
+          <p class="timeline__phase">募集</p>
+          <p class="timeline__span">約1か月</p>
+          <p class="timeline__desc">運営はMetagri研究所側。LP・応募フォーム・全国メディア露出・クリエイター動員・週次レポート</p>
+        </li>
+        <li class="timeline__step">
+          <span class="timeline__dot"></span>
+          <p class="timeline__phase">審査・発表</p>
+          <p class="timeline__span">約1か月</p>
+          <p class="timeline__desc">グランプリ等の最終決定（公式審査）と、公式PR動画への採用・広報誌等への二次活用</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="flow__roles">
+      <p class="flow__roles-head">自治体側の役割は <strong>①テーマ設計 ②素材提供 ③地元告知 ④最終審査 ⑤二次活用</strong> の5つ。</p>
+      <p class="flow__roles-body">LP構築・応募フォーム・全国メディア露出・クリエイター動員（コミュニティ1,300人＋外部）・GA4データ取得・note記事5本は、テンプレートをそのまま流用します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S6 予算プラン ===== -->
 <section id="plans" class="section section--mist">
   <div class="container">
-    <p class="section__eyebrow">4つの予算プラン</p>
+    <p class="section__eyebrow">PLANS</p>
     <h2 class="section__title">予算0円のテストから、<br class="sp-only" />フル実装まで。</h2>
-    <p class="section__lead">
-      自治体の予算サイクル・関心度合いに応じて、<strong>4段階のプラン</strong>をご用意。<br />
-      応募フォームで「現時点での想定規模」をお選びください（後から変更可能）。
-    </p>
 
     <div class="plans__grid">
-      <!-- A: Free Test -->
-      <article class="plan plan--a">
+      <article class="plan">
         <p class="plan__tag">A. 無料テスト</p>
         <p class="plan__price">¥0</p>
-        <p class="plan__sub">「まず話を聞いてみたい」自治体向け</p>
         <ul class="plan__list">
-          <li>30分のオンライン壁打ち（無料）</li>
-          <li>白井市実証データの共有（数値・全動画リンク・GA4抜粋）</li>
-          <li>自治体側の課題ヒアリング</li>
-          <li>「この街でやるなら」の企画方向性メモ提出</li>
+          <li>30分のオンライン壁打ち</li>
+          <li>白井市実証データの共有（数値・全動画・GA4抜粋）</li>
+          <li>「この街でやるなら」の企画方向性メモ</li>
         </ul>
-        <p class="plan__use">▼ こんな自治体に</p>
-        <p class="plan__usebody">予算化前の情報収集／補助事業申請の前段／来年度予算要求の検討材料</p>
+        <p class="plan__usebody">予算化前の情報収集・来年度予算要求の検討材料に</p>
       </article>
 
-      <!-- B: Starter -->
-      <article class="plan plan--b">
+      <article class="plan">
         <p class="plan__tag">B. スターター</p>
         <p class="plan__price">〜10万円</p>
-        <p class="plan__sub">副賞だけは予算化したい自治体向け</p>
         <ul class="plan__list">
-          <li>白井市方式の縮小版コンテスト1回</li>
-          <li>副賞（特産品セット等）の予算化</li>
-          <li>LP／応募フォーム／ギャラリー（テンプレ流用）</li>
-          <li>Metagri Voices等での告知</li>
+          <li>縮小版コンテスト1回（副賞のみ予算化）</li>
+          <li>LP・応募フォーム・ギャラリー（テンプレ流用）</li>
           <li>結果発表記事1本</li>
         </ul>
-        <p class="plan__use">▼ こんな自治体に</p>
-        <p class="plan__usebody">本格実装は来年度に回したい／少額予算で実績を作りたい／首長・議会への提案材料がほしい</p>
+        <p class="plan__usebody">少額で実績を作り、首長・議会への提案材料に</p>
       </article>
 
-      <!-- C: Standard -->
-      <article class="plan plan--c is-recommended">
-        <p class="plan__ribbon">RECOMMENDED</p>
+      <article class="plan is-recommended">
+        <p class="plan__ribbon">おすすめ</p>
         <p class="plan__tag">C. スタンダード</p>
         <p class="plan__price">3〜50万円</p>
-        <p class="plan__sub">白井市方式と同等の標準パッケージ</p>
         <ul class="plan__list">
-          <li>白井市方式の標準実装（応募期間1か月）</li>
-          <li>全国紙・地元紙へのプレスリリース配信</li>
-          <li>公募ポータル5媒体への並列掲載</li>
-          <li>LP・ギャラリー・GA4実装・週次レポート</li>
-          <li>主催側note 5段階リリース</li>
-          <li>特別賞・参考投票運営</li>
-          <li>クリエイター制作プロセス記述（二次素材化）</li>
+          <li>白井市方式の標準実装（募集1か月）</li>
+          <li>全国紙プレスリリース＋公募ポータル5媒体掲載</li>
+          <li>GA4実装・週次レポート・note 5段階リリース</li>
+          <li>特別賞・参考投票の運営</li>
         </ul>
-        <p class="plan__use">▼ こんな自治体に</p>
-        <p class="plan__usebody">単発動画外注1本ぶんの予算をコンテスト化に振り向けたい／シティプロモーション政策の柱に据えたい</p>
+        <p class="plan__usebody">動画外注1本ぶんの予算をコンテスト化に振り向ける標準形</p>
       </article>
 
-      <!-- D: Full -->
-      <article class="plan plan--d">
+      <article class="plan">
         <p class="plan__tag">D. フル実装</p>
         <p class="plan__price">100万円〜</p>
-        <p class="plan__sub">政策事業の柱に位置付けたい自治体向け</p>
         <ul class="plan__list">
-          <li>スタンダードの全機能</li>
-          <li>受賞作品の<strong>二次活用設計</strong>（広報誌／公式note／サイネージ／観光連動）</li>
-          <li>結果発表セミナー or 現地イベント連動</li>
-          <li>内製PR羅針盤策定（GA4データ＋アンケート＋投票データの統合分析）</li>
-          <li>クリエイター継続関与（翌年の内製企画支援）</li>
-          <li>ふるさと納税／移住相談ファネル連動設計</li>
+          <li>スタンダード全機能</li>
+          <li>受賞作品の二次活用設計＋現地イベント連動</li>
+          <li>内製PR羅針盤策定・翌年の内製企画支援</li>
         </ul>
-        <p class="plan__use">▼ こんな自治体に</p>
-        <p class="plan__usebody">関係人口政策の柱に据えたい／単年で終わらせず複数年プログラム化したい／受賞作品を翌年以降の運用資産にしたい</p>
+        <p class="plan__usebody">関係人口政策の柱として複数年プログラム化したい自治体に</p>
       </article>
     </div>
 
-    <p class="plans__note">
-      ※ 上記は標準パッケージの目安です。素材整備状況・告知範囲・賞品設計により増減します。<br />
-      ※ 予算化の難しい年度途中の場合、「A. 無料テスト」から始めて翌年度の本格実装に繋ぐルートもおすすめです。
-    </p>
+    <div class="plans__cta">
+      <p class="plans__note">年度途中で予算化が難しい場合は「A. 無料テスト → 翌年度本格実装」のルートがおすすめです。</p>
+      <a href="#apply" class="btn btn--primary" data-cta="plans-end">まず無料相談で規模を相談する</a>
+    </div>
   </div>
 </section>
 
-<!-- ===== ⑧ FAQ ===== -->
-<section id="faq" class="section section--white">
-  <div class="container">
+<!-- ===== S8 FAQ ===== -->
+<section id="faq" class="section section--mist">
+  <div class="container container--narrow">
     <p class="section__eyebrow">FAQ</p>
-    <h2 class="section__title">自治体担当者からよくいただく<br class="sp-only" />7つの質問。</h2>
+    <h2 class="section__title">よくいただく5つの質問。</h2>
 
     <div class="faq__list">
       <details class="faq__item">
         <summary>Q1. うちで本当に応募が集まりますか？</summary>
-        <p>
-          白井市は <strong>自治体連携の初回試行で1か月31作品</strong>でした。応募集積は公募ポータル5媒体への並列掲載＋Metagri研究所コミュニティ1,300名＋クリエイター個別アプローチで担保します。
-          スタンダード以上のプランでは <strong>応募数の最低保証ライン</strong>を事前にすり合わせます。
-        </p>
+        <p>白井市は<strong>初回試行で1か月31作品</strong>。公募ポータル5媒体並列掲載＋コミュニティ1,300名＋クリエイター個別アプローチで集積を担保し、スタンダード以上では<strong>応募数の最低保証ライン</strong>を事前にすり合わせます。</p>
       </details>
-
       <details class="faq__item">
-        <summary>Q2. AI動画は著作権・炎上リスクが心配です。</summary>
-        <p>
-          応募規約で <strong>使用ツール記載・素材出典明記</strong>を義務化し、応募時審査で除外可能な設計にしています。
-          白井市実装の規約・チェックフローをそのまま流用できます。グランプリ採用前にも別途権利確認を実施します。
-        </p>
+        <summary>Q2. AI動画の著作権・炎上リスクが心配です。</summary>
+        <p>応募規約で<strong>使用ツール記載・素材出典明記</strong>を義務化し、応募時審査で除外可能な設計です。白井市実装の規約・チェックフローをそのまま流用でき、グランプリ採用前にも別途権利確認を実施します。</p>
       </details>
-
       <details class="faq__item">
-        <summary>Q3. 写真素材が整っていません。提供が負担です。</summary>
-        <p>
-          白井市は <strong>42枚を6カテゴリに整理＋ガイドブック.docx</strong>で運用しました。準備パッケージ（カテゴリ設計テンプレ／ガイドブック雛形／撮影リスト）をお渡しします。
-          素材ゼロからの場合は、<strong>D. フル実装</strong>で素材撮影パートナーをご紹介することも可能です。
-        </p>
+        <summary>Q3. 写真素材が整っていません。</summary>
+        <p>白井市は<strong>42枚を6カテゴリに整理</strong>して運用しました。カテゴリ設計テンプレ・ガイドブック雛形・撮影リストの準備パッケージをお渡しします。素材ゼロの場合は撮影パートナーのご紹介も可能です（フル実装）。</p>
       </details>
-
       <details class="faq__item">
-        <summary>Q4. グランプリ作品の品質が読めません。公式採用に耐えますか？</summary>
-        <p>
-          賞設計で <strong>「採用は審査後に決定」と明記</strong>することで、品質が想定に満たない場合は別枠での活用も可能にしています。
-          白井市はグランプリ作品を公式PR動画として採用予定（2026年夏以降）です。実例ベースで品質感をお見せできます。
-        </p>
+        <summary>Q4. 予算が読めず、稟議で説明しづらいです。</summary>
+        <p>単発動画外注1本ぶんを目安に、<strong>運営費＋賞品＋広報費</strong>で切り分けた見積もりをご提示します。稟議資料には「比較表」「KPI貢献表」「リスク対応表」をそのまま転載できる形でお渡しします。</p>
       </details>
-
       <details class="faq__item">
-        <summary>Q5. 準備期間が長すぎませんか？議会・年度との整合は？</summary>
-        <p>
-          標準実装で <strong>約4か月</strong>（準備2＋募集1＋審査1）。当該年度内で完結する設計です。
-          年度をまたぐ場合は、A. 無料テスト → 翌年度本格実装、というルートを推奨します。
-        </p>
-      </details>
-
-      <details class="faq__item">
-        <summary>Q6. 予算が読めず、稟議で説明しづらいです。</summary>
-        <p>
-          単発動画外注1本ぶんを目安に、<strong>運営費＋賞品＋広報費</strong>で切り分けて見積もりをご提示します。
-          稟議資料には「比較表」「KPI貢献表」「リスク対応表」をそのまま転載できる形でお渡しします。
-        </p>
-      </details>
-
-      <details class="faq__item">
-        <summary>Q7. 市民の反応が見えず、議会対応が難しそうです。</summary>
-        <p>
-          GA4＋投票データ＋制作プロセス記述で <strong>毎週の数値報告書</strong>を提出します（標準実装）。
-          白井市では応募期間中のアクティブユーザー147名・視聴1,143回・滞在時間8分37秒など、議会説明に使える質的データを取得しています。
-        </p>
+        <summary>Q5. 議会に説明できる効果データは取れますか？</summary>
+        <p>GA4＋投票データ＋制作プロセス記述で<strong>毎週の数値報告書</strong>を提出します（標準実装）。白井市では視聴イベント・滞在時間など、議会説明に使える質的データを取得済みです。</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ===== ⑨ 応募フォーム ===== -->
+<!-- ===== S9 フォーム＋クロージング ===== -->
 <section id="apply" class="section section--ink">
   <div class="container container--narrow">
-    <p class="section__eyebrow section__eyebrow--light">APPLY</p>
-    <h2 class="section__title section__title--light">公募フォーム</h2>
+    <p class="section__eyebrow section__eyebrow--light">APPLY / 無料相談</p>
+    <h2 class="section__title section__title--light">まずは、無料の30分相談から。</h2>
     <p class="section__lead section__lead--light">
-      ご記入いただいた内容をもとに、<strong>3営業日以内</strong>に担当（株式会社農情人 甲斐）よりご連絡します。<br />
-      ヒアリングまでは無料です。お気軽にお問い合わせください。
+      必須は4項目・1分で完了します。3営業日以内に担当（株式会社農情人 甲斐）よりご連絡します。<br />
+      ヒアリングまで無料。白井市の実証データ・稟議用資料もこの場でお渡しできます。
     </p>
 
     <form id="applyForm" class="form" novalidate>
-      <!-- 基本情報 -->
       <fieldset class="form__set">
         <legend class="form__legend">基本情報</legend>
-
         <div class="form__row">
           <label for="org" class="form__label">自治体名・組織名 <span class="form__req">必須</span></label>
-          <input type="text" id="org" name="org" class="form__input" placeholder="例：〇〇県〇〇市、株式会社〇〇" required />
+          <input type="text" id="org" name="org" class="form__input" placeholder="例：〇〇県〇〇市" required />
         </div>
-
-        <div class="form__row">
-          <label for="name" class="form__label">ご担当者様のお名前 <span class="form__req">必須</span></label>
-          <input type="text" id="name" name="name" class="form__input" required />
-        </div>
-
-        <div class="form__row">
-          <label for="dept" class="form__label">所属部署</label>
-          <input type="text" id="dept" name="dept" class="form__input" placeholder="例：観光振興課、企画政策課、シティプロモーション課" />
-        </div>
-
         <div class="form__row form__row--two">
+          <div>
+            <label for="name" class="form__label">ご担当者様のお名前 <span class="form__req">必須</span></label>
+            <input type="text" id="name" name="name" class="form__input" required />
+          </div>
           <div>
             <label for="email" class="form__label">メールアドレス <span class="form__req">必須</span></label>
             <input type="email" id="email" name="email" class="form__input" required />
           </div>
+        </div>
+        <div class="form__row form__row--two">
           <div>
-            <label for="tel" class="form__label">電話番号</label>
-            <input type="tel" id="tel" name="tel" class="form__input" placeholder="例：03-1234-5678" />
+            <label for="dept" class="form__label">所属部署（任意）</label>
+            <input type="text" id="dept" name="dept" class="form__input" placeholder="例：企画政策課、シティプロモーション課" />
+          </div>
+          <div>
+            <label for="tel" class="form__label">電話番号（任意）</label>
+            <input type="tel" id="tel" name="tel" class="form__input" />
           </div>
         </div>
       </fieldset>
 
-      <!-- 関心テーマ -->
       <fieldset class="form__set">
-        <legend class="form__legend">関心のあるテーマ <span class="form__hint">（複数選択可）</span></legend>
+        <legend class="form__legend">想定する予算規模 <span class="form__req">必須</span></legend>
+        <p class="form__hint form__hint--block">現時点の「想定」で結構です。後から変更できます。</p>
+        <div class="form__radio-list">
+          <label class="form__radio">
+            <input type="radio" name="budget" value="A_予算なしで無料テストしたい" required />
+            <span class="form__radio-body"><span class="form__radio-head"><strong>A. 予算なし（無料テスト）</strong></span><span class="form__radio-desc">まず情報収集から。30分壁打ち＋実証データ共有まで無料。</span></span>
+          </label>
+          <label class="form__radio">
+            <input type="radio" name="budget" value="B_10万円程度の副賞を準備できる" />
+            <span class="form__radio-body"><span class="form__radio-head"><strong>B. 10万円程度</strong></span><span class="form__radio-desc">副賞中心のスターター実装。</span></span>
+          </label>
+          <label class="form__radio">
+            <input type="radio" name="budget" value="C_3-50万円規模の広報予算が取れる" />
+            <span class="form__radio-body"><span class="form__radio-head"><strong>C. 3〜50万円規模</strong></span><span class="form__radio-desc">白井市方式の標準実装。</span></span>
+          </label>
+          <label class="form__radio">
+            <input type="radio" name="budget" value="D_100万円以上の予算を組める" />
+            <span class="form__radio-body"><span class="form__radio-head"><strong>D. 100万円以上</strong></span><span class="form__radio-desc">二次活用・イベント連動までのフル実装。</span></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__set">
+        <legend class="form__legend">関心のあるテーマ（任意・複数可）</legend>
         <div class="form__check-grid">
           <label class="form__check"><input type="checkbox" name="theme" value="観光PR" /><span>観光PR</span></label>
           <label class="form__check"><input type="checkbox" name="theme" value="特産品・ふるさと納税" /><span>特産品・ふるさと納税</span></label>
@@ -627,93 +500,11 @@
         </div>
       </fieldset>
 
-      <!-- 予算ティア -->
-      <fieldset class="form__set form__set--budget">
-        <legend class="form__legend">想定する予算規模 <span class="form__req">必須</span></legend>
-        <p class="form__hint form__hint--block">
-          現時点での「想定」で結構です。ヒアリング後に最適なプランを一緒に検討します。
-        </p>
-        <div class="form__radio-list">
-          <label class="form__radio">
-            <input type="radio" name="budget" value="A_予算なしで無料テストしたい" required />
-            <span class="form__radio-body">
-              <span class="form__radio-head"><strong>A. 予算なし（無料テスト）</strong></span>
-              <span class="form__radio-desc">まず情報収集から。30分の壁打ち＋実証データ共有まで無料で対応可。</span>
-            </span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="B_10万円程度の副賞を準備できる" />
-            <span class="form__radio-body">
-              <span class="form__radio-head"><strong>B. 10万円程度の副賞を準備できる</strong></span>
-              <span class="form__radio-desc">副賞中心のスターター実装。少額予算で実績を作りたい段階に。</span>
-            </span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="C_3-50万円規模の広報予算が取れる" />
-            <span class="form__radio-body">
-              <span class="form__radio-head"><strong>C. 3〜50万円規模の広報予算が取れる</strong></span>
-              <span class="form__radio-desc">白井市方式の標準実装。単発動画外注1本ぶんをコンテスト化に振り向けるイメージ。</span>
-            </span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="D_100万円以上の予算を組める" />
-            <span class="form__radio-body">
-              <span class="form__radio-head"><strong>D. 100万円以上の予算を組める</strong></span>
-              <span class="form__radio-desc">フル実装。受賞作品の二次活用・現地イベント連動・内製PR羅針盤策定まで。</span>
-            </span>
-          </label>
-        </div>
-      </fieldset>
-
-      <!-- 素材提供可否 -->
       <fieldset class="form__set">
-        <legend class="form__legend">PR素材（写真・動画）の提供可否 <span class="form__req">必須</span></legend>
-        <p class="form__hint form__hint--block">
-          AI生成の品質向上のため、地域の風景や特産品の素材提供をお願いしています。
-        </p>
-        <div class="form__radio-list form__radio-list--simple">
-          <label class="form__radio-simple"><input type="radio" name="materials" value="写真・動画ともに豊富にある" required /><span>写真・動画ともに豊富にある</span></label>
-          <label class="form__radio-simple"><input type="radio" name="materials" value="写真は提供可能" /><span>写真は提供可能</span></label>
-          <label class="form__radio-simple"><input type="radio" name="materials" value="現時点ではない（撮影が必要）" /><span>現時点ではない（撮影が必要）</span></label>
-          <label class="form__radio-simple"><input type="radio" name="materials" value="確認が必要" /><span>確認が必要</span></label>
-        </div>
+        <legend class="form__legend">ご質問・現状の課題など（任意）</legend>
+        <textarea id="other" name="other" class="form__textarea" rows="3" placeholder="例：過去にプロモ動画を外注したが効果検証できなかった／写真素材があるか確認したい など"></textarea>
       </fieldset>
 
-      <!-- 活用イメージ -->
-      <fieldset class="form__set">
-        <legend class="form__legend">完成動画の活用イメージ <span class="form__req">必須</span></legend>
-        <p class="form__hint form__hint--block">
-          例：道の駅のサイネージで放映、成人式イベントで上映、公式YouTubeで配信、ふるさと納税ポータルで活用、移住相談会で再生など
-        </p>
-        <textarea id="useCase" name="useCase" class="form__textarea" rows="4" placeholder="具体的な活用シーンをご記入ください" required></textarea>
-      </fieldset>
-
-      <!-- 過去の取組み -->
-      <fieldset class="form__set">
-        <legend class="form__legend">過去の類似取組み・現状の課題</legend>
-        <textarea id="past" name="past" class="form__textarea" rows="3" placeholder="例：これまでにプロモ動画を外注したが効果検証できなかった／移住パンフを更新したが反応が読めない、など"></textarea>
-      </fieldset>
-
-      <!-- 決裁フロー -->
-      <fieldset class="form__set">
-        <legend class="form__legend">本プロジェクト進行時の決裁・確認フロー</legend>
-        <select id="approval" name="approval" class="form__select">
-          <option value="">選択してください</option>
-          <option value="担当者判断で進められる">担当者判断で進められる</option>
-          <option value="課長承認が必要">課長承認が必要</option>
-          <option value="部長・首長承認が必要">部長・首長承認が必要</option>
-          <option value="議会説明・予算化が必要">議会説明・予算化が必要</option>
-          <option value="まだ未確認">まだ未確認</option>
-        </select>
-      </fieldset>
-
-      <!-- その他 -->
-      <fieldset class="form__set">
-        <legend class="form__legend">その他、ご質問・ご要望</legend>
-        <textarea id="other" name="other" class="form__textarea" rows="3"></textarea>
-      </fieldset>
-
-      <!-- 同意 -->
       <fieldset class="form__set form__set--agree">
         <label class="form__agree">
           <input type="checkbox" name="agree" required />
@@ -722,30 +513,17 @@
       </fieldset>
 
       <div class="form__submit">
-        <button type="submit" class="btn btn--primary btn--large">📨 この内容で送信する</button>
+        <button type="submit" class="btn btn--primary btn--large" data-cta="form-submit">この内容で無料相談を申し込む</button>
         <p class="form__after">送信後、3営業日以内に株式会社農情人 甲斐よりご連絡いたします。</p>
       </div>
 
       <div id="formMessage" class="form__msg" role="status" aria-live="polite"></div>
     </form>
-  </div>
-</section>
 
-<!-- ===== ⑩ クロージングメッセージ ===== -->
-<section class="closing">
-  <div class="container">
-    <p class="closing__eyebrow">FROM Metagri研究所 / 株式会社農情人</p>
-    <p class="closing__body">
-      自治体PR動画は、「正しい情報を正しく届ける」段階で止まりがちでした。<br />
-      私たちが提案するのは、<strong>その先の景色</strong>です。<br /><br />
-      31人のクリエイターが、それぞれの「街の入口」を作る。<br />
-      数百人の視聴者が、そこから「自分の中の街」を選び直す。<br /><br />
-      その共創のなかで、「街を語る人」が <strong>全国に増えていく</strong>。<br /><br />
-      白井市でできたことは、あなたの街でも、必ずできます。<br />
-      まずは、無料の30分壁打ちから。
-    </p>
-    <div class="closing__cta">
-      <a href="#apply" class="btn btn--primary btn--large">📨 公募フォームへ進む</a>
+    <div class="closing">
+      <p class="closing__line">PR動画を、外注して終わりにしない。</p>
+      <p class="closing__line">街を語る人が増え、その視点が次の企画につながっていく。</p>
+      <p class="closing__line closing__line--accent">白井市で生まれたあの景色は、あなたの街でも、きっと生まれます。</p>
     </div>
   </div>
 </section>
@@ -763,13 +541,12 @@
         <p class="footer__head">関連リンク</p>
         <ul class="footer__list">
           <li><a href="https://metagri-labo.com/" target="_blank" rel="noopener noreferrer">Metagri研究所 公式サイト</a></li>
-          <li><a href="https://metagri-labo.com/metagri-shiroi-pr-video-contest/" target="_blank" rel="noopener noreferrer">白井市PR動画コンテスト TOP</a></li>
+          <li><a href="https://shiroi-pr-video-contest.metagri-labo.com/awards" target="_blank" rel="noopener noreferrer">白井市コンテスト 受賞作品</a></li>
           <li><a href="https://shiroi-pr-video-contest.metagri-labo.com/gallery" target="_blank" rel="noopener noreferrer">白井市コンテスト 作品ギャラリー（31作品）</a></li>
-          <li><a href="https://note.com/noujoujin/n/n3f6edd912ef4" target="_blank" rel="noopener noreferrer">審査の裏側note</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <p class="footer__head">過去の実績</p>
+        <p class="footer__head">過去の実績（シリーズ）</p>
         <ul class="footer__list">
           <li><a href="https://agri-vision.metagri-labo.com/results/" target="_blank" rel="noopener noreferrer">AGRI VISION 2125（第1弾・33作品）</a></li>
           <li><a href="https://agrivision-genz-2025.metagri-labo.com/awards" target="_blank" rel="noopener noreferrer">AGRI VISION for Gen Z（第2弾）</a></li>
@@ -782,6 +559,6 @@
 </footer>
 
 </div>
-<script src="script.js" defer></script>
+<script src="script_b.js" defer></script>
 </body>
 </html>
