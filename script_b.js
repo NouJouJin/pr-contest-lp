@@ -145,7 +145,7 @@
         budget: fd.get('budget') || '',
         other: fd.get('other')?.trim() || '',
         submittedAt: new Date().toISOString(),
-        source: 'pr-contest-lp / index_b (case-b)',
+        source: 'pr-contest-lp / index.html (production)',
       };
 
       const submitBtn = form.querySelector('button[type="submit"]');
