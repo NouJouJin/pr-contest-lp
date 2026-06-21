@@ -10,6 +10,31 @@
 
 .section__cta { text-align: center; margin-top: 48px; }
 
+/* ---------- Airtable 申込フォーム ---------- */
+.airtable-form {
+  margin-top: 48px;
+}
+.airtable-embed {
+  display: block;
+  width: 100%;
+  min-height: 533px;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+}
+.airtable-form__fallback {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+  text-align: center;
+}
+.airtable-form__fallback a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* =====================================================================
    S1 ヒーロー（受賞サムネ・モザイク背景）
    ===================================================================== */

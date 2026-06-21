@@ -438,89 +438,21 @@
       ヒアリングまで無料。白井市の実証データ・稟議用資料もこの場でお渡しできます。
     </p>
 
-    <form id="applyForm" class="form" novalidate>
-      <fieldset class="form__set">
-        <legend class="form__legend">基本情報</legend>
-        <div class="form__row">
-          <label for="org" class="form__label">自治体名・組織名 <span class="form__req">必須</span></label>
-          <input type="text" id="org" name="org" class="form__input" placeholder="例：〇〇県〇〇市" required />
-        </div>
-        <div class="form__row form__row--two">
-          <div>
-            <label for="name" class="form__label">ご担当者様のお名前 <span class="form__req">必須</span></label>
-            <input type="text" id="name" name="name" class="form__input" required />
-          </div>
-          <div>
-            <label for="email" class="form__label">メールアドレス <span class="form__req">必須</span></label>
-            <input type="email" id="email" name="email" class="form__input" required />
-          </div>
-        </div>
-        <div class="form__row form__row--two">
-          <div>
-            <label for="dept" class="form__label">所属部署（任意）</label>
-            <input type="text" id="dept" name="dept" class="form__input" placeholder="例：企画政策課、シティプロモーション課" />
-          </div>
-          <div>
-            <label for="tel" class="form__label">電話番号（任意）</label>
-            <input type="tel" id="tel" name="tel" class="form__input" />
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__set">
-        <legend class="form__legend">想定する予算規模 <span class="form__req">必須</span></legend>
-        <p class="form__hint form__hint--block">現時点の「想定」で結構です。後から変更できます。</p>
-        <div class="form__radio-list">
-          <label class="form__radio">
-            <input type="radio" name="budget" value="A_予算なしで無料テストしたい" required />
-            <span class="form__radio-body"><span class="form__radio-head"><strong>A. 予算なし（無料テスト）</strong></span><span class="form__radio-desc">まず情報収集から。30分壁打ち＋実証データ共有まで無料。</span></span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="B_10万円程度の副賞を準備できる" />
-            <span class="form__radio-body"><span class="form__radio-head"><strong>B. 10万円程度</strong></span><span class="form__radio-desc">副賞中心のスターター実装。</span></span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="C_3-50万円規模の広報予算が取れる" />
-            <span class="form__radio-body"><span class="form__radio-head"><strong>C. 3〜50万円規模</strong></span><span class="form__radio-desc">白井市方式の標準実装。</span></span>
-          </label>
-          <label class="form__radio">
-            <input type="radio" name="budget" value="D_100万円以上の予算を組める" />
-            <span class="form__radio-body"><span class="form__radio-head"><strong>D. 100万円以上</strong></span><span class="form__radio-desc">二次活用・イベント連動までのフル実装。</span></span>
-          </label>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__set">
-        <legend class="form__legend">関心のあるテーマ（任意・複数可）</legend>
-        <div class="form__check-grid">
-          <label class="form__check"><input type="checkbox" name="theme" value="観光PR" /><span>観光PR</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="特産品・ふるさと納税" /><span>特産品・ふるさと納税</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="移住・定住促進" /><span>移住・定住促進</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="イベント・祭り" /><span>イベント・祭り</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="シティプロモーション全般" /><span>シティプロモーション全般</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="その他" /><span>その他</span></label>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__set">
-        <legend class="form__legend">ご質問・現状の課題など（任意）</legend>
-        <textarea id="other" name="other" class="form__textarea" rows="3" placeholder="例：過去にプロモ動画を外注したが効果検証できなかった／写真素材があるか確認したい など"></textarea>
-      </fieldset>
-
-      <fieldset class="form__set form__set--agree">
-        <label class="form__agree">
-          <input type="checkbox" name="agree" required />
-          <span>個人情報の取り扱いに同意します（株式会社農情人プライバシーポリシーに準拠／本件以外には利用しません）</span>
-        </label>
-      </fieldset>
-
-      <div class="form__submit">
-        <button type="submit" class="btn btn--primary btn--large" data-cta="form-submit">この内容で無料相談を申し込む</button>
-        <p class="form__after">送信後、3営業日以内に株式会社農情人 甲斐よりご連絡いたします。</p>
-      </div>
-
-      <div id="formMessage" class="form__msg" role="status" aria-live="polite"></div>
-    </form>
+    <div class="airtable-form">
+      <iframe
+        class="airtable-embed"
+        src="https://airtable.com/embed/appyryv3siqiT2g4g/pagStx6QndUepg1t6/form"
+        title="自治体PR動画コンテスト 無料相談フォーム"
+        frameborder="0"
+        width="100%"
+        height="533"
+        loading="lazy"
+      ></iframe>
+      <p class="airtable-form__fallback">
+        フォームが表示されない場合は、
+        <a href="https://airtable.com/embed/appyryv3siqiT2g4g/pagStx6QndUepg1t6/form" target="_blank" rel="noopener noreferrer" data-cta="airtable-direct">こちらから直接フォームを開いてください</a>。
+      </p>
+    </div>
 
     <div class="closing">
       <p class="closing__line">PR動画を、外注して終わりにしない。</p>
