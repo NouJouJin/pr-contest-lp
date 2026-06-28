@@ -116,6 +116,8 @@
   /* ---------- 5. フォーム送信 ---------- */
   const form = document.getElementById('applyForm');
   const msg = document.getElementById('formMessage');
+  const lpType = document.body?.dataset?.lp || 'production';
+  const isPartnerLp = lpType === 'partner';
 
   const AIRTABLE_ENDPOINT = ''; // 例: 'https://api.airtable.com/v0/appXXXX/Submissions'
   const AIRTABLE_TOKEN = '';
@@ -143,9 +145,10 @@
         tel: fd.get('tel')?.trim() || '',
         themes,
         budget: fd.get('budget') || '',
+        area: fd.get('area')?.trim() || '',
         other: fd.get('other')?.trim() || '',
         submittedAt: new Date().toISOString(),
-        source: 'pr-contest-lp / index.html (production)',
+        source: isPartnerLp ? 'pr-contest-lp / partner.html' : 'pr-contest-lp / index.html (production)',
       };
 
       const submitBtn = form.querySelector('button[type="submit"]');
@@ -170,6 +173,7 @@
                 Tel: payload.tel,
                 Themes: payload.themes.join(', '),
                 Budget: payload.budget,
+                Area: payload.area,
                 Other: payload.other,
                 SubmittedAt: payload.submittedAt,
                 Source: payload.source,
@@ -178,7 +182,8 @@
           });
           if (!res.ok) throw new Error(`Airtable error: ${res.status}`);
         } else {
-          const subject = `【自治体公募フォーム】${payload.organization} ${payload.name}様`;
+          const subjectPrefix = isPartnerLp ? '地域共創パートナー申込' : '自治体公募フォーム';
+          const subject = `【${subjectPrefix}】${payload.organization} ${payload.name}様`;
           const body = formatMailBody(payload);
           const mailto = `mailto:${FALLBACK_MAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           window.location.href = mailto;
@@ -207,17 +212,28 @@
   }
 
   function formatMailBody(p) {
-    return [
-      '＝＝＝ 自治体PR動画コンテスト 公募フォーム（案B） ＝＝＝',
+    const title = isPartnerLp
+      ? '＝＝＝ 地域共創パートナー申込フォーム ＝＝＝'
+      : '＝＝＝ 自治体PR動画コンテスト 公募フォーム（案B） ＝＝＝';
+
+    const lines = [
+      title,
       '',
-      `■ 自治体名・組織名：${p.organization}`,
+      `■ ${isPartnerLp ? '企業・団体名' : '自治体名・組織名'}：${p.organization}`,
       `■ ご担当者名　　　：${p.name}`,
       `■ 所属部署　　　　：${p.department || '-'}`,
       `■ メールアドレス　：${p.email}`,
       `■ 電話番号　　　　：${p.tel || '-'}`,
       '',
-      `■ 関心テーマ　　　：${p.themes.join(' / ') || '-'}`,
-      `■ 想定予算規模　　：${p.budget}`,
+      `■ ${isPartnerLp ? '関連領域' : '関心テーマ'}　　　：${p.themes.join(' / ') || '-'}`,
+      `■ ${isPartnerLp ? '提携形態' : '想定予算規模'}　　：${p.budget}`,
+    ];
+
+    if (isPartnerLp) {
+      lines.push(`■ 想定自治体・地域：${p.area || '-'}`);
+    }
+
+    return lines.concat([
       '',
       `■ その他質問・要望：`,
       p.other || '-',
@@ -225,6 +241,6 @@
       '＝＝＝',
       `送信日時：${p.submittedAt}`,
       `送信元　：${p.source}`,
-    ].join('\n');
+    ]).join('\n');
   }
 })();
