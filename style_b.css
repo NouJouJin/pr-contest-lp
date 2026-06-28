@@ -35,6 +35,12 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.section--ink .airtable-form__fallback {
+  color: rgba(255, 255, 255, 0.78);
+}
+.section--ink .airtable-form__fallback a {
+  color: #ffffff;
+}
 
 /* =====================================================================
    S1 ヒーロー（受賞サムネ・モザイク背景）

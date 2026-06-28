@@ -253,7 +253,7 @@
       <article class="plan is-recommended">
         <p class="plan__ribbon">共同提案</p>
         <p class="plan__tag">自治体への新規提案に</p>
-        <p class="plan__price">Joint Proposal</p>
+        <p class="plan__price">共同提案</p>
         <ul class="plan__list">
           <li>パートナー企業が自治体との接点を提供</li>
           <li>Metagri研究所が企画・運営設計を担当</li>
@@ -263,7 +263,7 @@
       </article>
       <article class="plan">
         <p class="plan__tag">既存サービスの拡張に</p>
-        <p class="plan__price">Service Add-on</p>
+        <p class="plan__price">サービス組み込み</p>
         <ul class="plan__list">
           <li>ふるさと納税、移住、観光支援に組み込み</li>
           <li>既存契約先への追加メニューとして提供</li>
@@ -273,7 +273,7 @@
       </article>
       <article class="plan">
         <p class="plan__tag">地域貢献・官民連携に</p>
-        <p class="plan__price">Sponsor</p>
+        <p class="plan__price">協賛パートナー</p>
         <ul class="plan__list">
           <li>協賛・企業版ふるさと納税での関与</li>
           <li>地域クリエイター育成やPR支援として展開</li>
@@ -385,84 +385,24 @@
     <p class="section__eyebrow section__eyebrow--light">APPLY</p>
     <h2 class="section__title section__title--light">地域共創パートナーに申し込む</h2>
     <p class="section__lead section__lead--light">
-      必須項目は4つです。送信後、株式会社農情人／Metagri研究所よりご連絡します。
+      以下のフォームにご入力ください。送信後、株式会社農情人／Metagri研究所よりご連絡します。
     </p>
 
-    <form id="applyForm" class="form partner-form" novalidate>
-      <fieldset class="form__set">
-        <legend class="form__legend">基本情報</legend>
-        <div class="form__row">
-          <label class="form__label" for="org">企業・団体名 <span class="form__req">必須</span></label>
-          <input class="form__input" id="org" name="org" type="text" autocomplete="organization" required />
-        </div>
-        <div class="form__row form__row--two">
-          <div>
-            <label class="form__label" for="name">ご担当者名 <span class="form__req">必須</span></label>
-            <input class="form__input" id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div>
-            <label class="form__label" for="dept">部署・役職</label>
-            <input class="form__input" id="dept" name="dept" type="text" autocomplete="organization-title" />
-          </div>
-        </div>
-        <div class="form__row form__row--two">
-          <div>
-            <label class="form__label" for="email">メールアドレス <span class="form__req">必須</span></label>
-            <input class="form__input" id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div>
-            <label class="form__label" for="tel">電話番号</label>
-            <input class="form__input" id="tel" name="tel" type="tel" autocomplete="tel" />
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__set">
-        <legend class="form__legend">提携イメージ</legend>
-        <p class="form__hint form__hint--block">当てはまるものを選択してください。</p>
-        <div class="form__check-grid partner-form__checks">
-          <label class="form__check"><input type="checkbox" name="theme" value="ふるさと納税" /><span>ふるさと納税</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="移住・定住" /><span>移住・定住</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="観光・DMO" /><span>観光・DMO</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="シティプロモーション" /><span>シティプロモーション</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="地域金融・地域商社" /><span>地域金融・地域商社</span></label>
-          <label class="form__check"><input type="checkbox" name="theme" value="官民連携・コンサル" /><span>官民連携・コンサル</span></label>
-        </div>
-
-        <div class="form__row partner-form__select">
-          <label class="form__label" for="budget">検討したい提携形態 <span class="form__req">必須</span></label>
-          <select class="form__select" id="budget" name="budget" required>
-            <option value="">選択してください</option>
-            <option value="共同提案">共同提案</option>
-            <option value="サービス組み込み">サービス組み込み</option>
-            <option value="協賛・企業版ふるさと納税">協賛・企業版ふるさと納税</option>
-            <option value="相談して決めたい">相談して決めたい</option>
-          </select>
-        </div>
-
-        <div class="form__row">
-          <label class="form__label" for="area">想定している自治体・地域</label>
-          <input class="form__input" id="area" name="area" type="text" placeholder="例：関東圏の移住促進に関心のある自治体、既存取引先の市町村 など" />
-        </div>
-        <div class="form__row">
-          <label class="form__label" for="other">相談内容・補足</label>
-          <textarea class="form__textarea" id="other" name="other" rows="5" placeholder="自治体との接点、既存サービス、相談したい内容などをご記入ください。"></textarea>
-        </div>
-      </fieldset>
-
-      <fieldset class="form__set form__set--agree">
-        <label class="form__agree">
-          <input type="checkbox" name="agree" required />
-          <span>送信内容を確認し、Metagri研究所からの連絡を受け取ることに同意します。<span class="form__req">必須</span></span>
-        </label>
-      </fieldset>
-
-      <div class="form__submit">
-        <button class="btn btn--primary btn--large" type="submit" data-cta="form-submit">この内容で申し込む</button>
-        <p class="form__after">送信ボタンを押すとメールソフトが起動します。起動しない場合は info@metagri-labo.com までご連絡ください。</p>
-      </div>
-      <p id="formMessage" class="form__msg" role="status" aria-live="polite"></p>
-    </form>
+    <div class="airtable-form">
+      <iframe
+        class="airtable-embed"
+        src="https://airtable.com/embed/appyryv3siqiT2g4g/pagDPLCU1PaGHeVcb/form"
+        frameborder="0"
+        onmousewheel=""
+        width="100%"
+        height="533"
+        title="地域共創パートナー申込フォーム"
+      ></iframe>
+      <p class="airtable-form__fallback">
+        埋め込みフォームが表示されない場合は、
+        <a href="https://airtable.com/appyryv3siqiT2g4g/pagDPLCU1PaGHeVcb/form" target="_blank" rel="noopener noreferrer" data-cta="airtable-direct">こちらから直接フォームを開いてください</a>。
+      </p>
+    </div>
 
     <div class="closing">
       <p class="closing__line">地域PRを、自治体だけで抱え込まない。</p>
